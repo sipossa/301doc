@@ -1,0 +1,96 @@
+function form_check(){
+
+	var frm = document.wFrm ;
+	var v_normal;
+
+	if (frm.UserName.value =="")
+	{	alert("이름을 입력해 주세요.");
+		frm.UserName.focus();
+		return false;
+	}	
+	v_normal = /[^가-힣]/g;
+
+	if (v_normal.test(frm.UserName.value))
+	{	alert("올바른 이름을 입력하여 주세요.");
+		frm.UserName.focus();
+		return false;
+	}
+
+	if (frm.UserName.value.length<2 || frm.UserName.value.length > 10 )
+	{	alert("2~10자의 올바른 이름을 입력하여 주세요.");
+		frm.UserName.focus();
+		return false;
+	}
+
+	if (frm.UserHP_02.value =="")
+	{	alert("핸드폰 번호를 입력해 주세요.");
+		frm.UserHP_02.focus();
+		return false;
+	}	
+	v_normal = /[^0-9]/g; 
+	if (v_normal.test(frm.UserHP_02.value))
+	{	alert("숫자만 입력할수 있습니다.");
+		frm.UserHP_02.focus();
+		return false;
+	} 
+	if (frm.UserHP_02.value.length < 3)
+	{	alert("올바른 핸드폰 번호를 입력해 주세요.");
+		frm.UserHP_02.focus();
+		return false;
+	}	
+	if (frm.UserHP_03.value =="")
+	{	alert("핸드폰 번호를 입력해 주세요.");
+		frm.UserHP_03.focus();
+		return false;
+	}	
+	v_normal = /[^0-9]/g; 
+	if (v_normal.test(frm.UserHP_03.value))
+	{	alert("숫자만 입력할수 있습니다.");
+		frm.UserHP_03.focus();
+		return false;
+	}
+	if (frm.UserHP_03.value.length < 4)
+	{	alert("올바른 핸드폰 번호를 입력해 주세요.");
+		frm.UserHP_03.focus();
+		return false;
+	}
+
+	if (frm.UserBirth_Y.value =="")
+	{	alert("출생년도를 입력해 주세요.");
+		frm.UserBirth_Y.focus();
+		return false;
+	}
+	if (frm.UserBirth_Y.value.length != 2)
+	{	alert("올바른 출생년도를 입력해 주세요.");
+		frm.UserBirth_Y.focus();
+		return false;
+	}
+	if (v_normal.test(frm.UserBirth_Y.value))
+	{	alert("출생년도는 숫자만 입력할수 있습니다.");
+		frm.UserBirth_Y.focus();
+		return false;
+	}
+
+	if (parseInt(frm.UserBirth_Y.value)<=38) {
+		alert("정확한 나이를 입력해주세요.");
+		frm.UserBirth_Y.focus();
+		return false;
+	}
+
+	if (parseInt(frm.UserBirth_Y.value)==99) {
+
+		aclick(35,'G');
+
+		alert("20세 이상부터 참여 가능합니다.");
+		frm.UserBirth_Y.focus();
+		return false;
+	}
+
+  if (frm.UserHP_01.value+"-"+frm.UserHP_02.value +"-"+frm.UserHP_03.value == "010-2000-0000"){
+    alert("등록할 수 없는 번호 입니다");
+    return false;
+  }
+
+	//frm.submit(); 
+	return true;
+}
