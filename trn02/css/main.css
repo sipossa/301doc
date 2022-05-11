@@ -93,6 +93,10 @@ nav>ul>li~li::before {
     font-size: 30px;
 }
 
+.main_visual {
+    position: relative;
+}
+
 .main_visual figure {
     position: relative;
     height: 600px;
@@ -216,4 +220,338 @@ nav>ul>li~li::before {
 
 .main_visual .slick-dots button {
     display: none;
+}
+
+
+.slide_num {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    font-size: 100px;
+    color: #fff;
+}
+
+.basic {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.basic .container {
+    gap: 30px;
+}
+
+section h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+section p {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+}
+
+
+.basic figure {
+    flex: 1;
+    overflow: hidden;
+}
+
+.basic figure .inbox {
+    overflow: hidden;
+    border-radius: 77% 23% 70% 30% / 31% 36% 64% 69%;
+    transition: 0.5s 0.5s;
+    margin: 0 0 30px 0;
+}
+
+.basic figure:hover .inbox {
+    border-radius: 10px;
+}
+
+.basic figure img {
+    transition: 0.5s;
+}
+
+.basic figure:hover img {
+    transform: scale(1.25);
+}
+
+.basic figure strong {
+    display: block;
+    margin: 0 0 20px 0;
+}
+
+.basic figure a {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 5px 20px 10px 20px;
+}
+
+.fixed_bg {
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../img/mainvisual01.jpg) no-repeat fixed center center/cover;
+    filter: grayscale(0.75);
+}
+
+.fixed_bg i {
+    padding: 10px;
+    background: #333;
+    margin: 5px 0 0 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.fixed_bg span {
+    vertical-align: middle;
+}
+
+.movie {
+    padding: 100px 0;
+}
+
+.movie .container {
+    gap: 50px;
+}
+
+.movie .container figure {
+    flex: 1;
+}
+
+.movie .container .dec {
+    flex: 1;
+    padding: 100px 0;
+}
+
+.movie video {
+    max-width: 100%;
+}
+
+.movie .dec i {
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    margin: 0 5px 0 0;
+}
+
+.utube {
+    padding: 150px 0;
+    text-align: center;
+    color: #fff;
+    filter: grayscale(1);
+}
+
+.utube i {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin: 0 2px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.product_list {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.product_list .product_slider {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.product_list .product_slider figure {
+    padding: 0 15px;
+}
+
+.product_list i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    padding: 15px;
+    color: #fff;
+    font-size: 40px;
+}
+
+.product_list .s_left {
+    margin: 0 0 0 -650px;
+}
+
+.product_list .s_right {
+    margin: 0 0 0 650px;
+}
+
+
+.product_list .slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 20px 0 0 0;
+}
+
+.product_list .slick-dots li {
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+}
+
+.product_list .slick-dots li.slick-active {
+    background: #f00;
+}
+
+.product_list .slick-dots button {
+    display: none;
+}
+
+.product_list .box {
+    margin: 0 0 20px 0;
+}
+
+
+
+.product_list figure img {
+    padding: 30px 0;
+    transition: 0.5s;
+}
+
+.product_list figure.slick-center img {
+    transform: scale(1.25);
+}
+
+.product_list small {
+    position: relative;
+    display: inline-block;
+    border-top: 30px solid #f00;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #f00;
+    border-left: 100px solid #f00;
+    width: 0;
+    height: 0;
+}
+
+.product_list span {
+    position: absolute;
+    top: -10px;
+    left: -80px;
+    color: #fff;
+}
+
+.tab {
+    padding: 100px 0;
+    background: #f7f7f7;
+}
+
+.tab .container {
+    gap: 40px;
+}
+
+.tab .tab_wrap {
+    flex: 1;
+}
+
+.tab_link {
+    display: flex;
+    border: 1px solid #ddd;
+}
+
+.tab_link>li {
+    flex: 1;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.tab_link>li.on {
+    background: #f00;
+}
+
+.tab_link>li~li {
+    border-left: 1px solid #ddd;
+}
+
+.tab figure {
+    flex: 1;
+}
+
+.tab_content>li {
+    display: none;
+}
+
+.tab_content>li.on {
+    display: block;
+}
+
+.tab_content>li dd {
+    display: flex;
+    justify-content: space-between;
+    line-height: 36px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab_content>li dd strong {
+    width: 480px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.footer {
+    background: #333;
+    padding: 0 0 50px 0;
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.footer hr {
+    border: none;
+    border-top: 1px solid #666;
+    margin: 0;
+}
+
+.footer .container {
+    justify-content: space-between;
+    line-height: 60px;
+}
+
+.footer .footer_top ul {
+    display: flex;
+}
+
+.footer .footer_top ul li~li::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+    margin: 0 15px;
+    vertical-align: middle;
+}
+
+.footer .footer_top .sns {
+    font-size: 0;
+}
+
+.footer .footer_top i {
+    padding: 10px;
+    background: #111;
+    font-size: 21px;
+    margin: auto 2px;
+    vertical-align: middle;
+}
+
+.footer #link {
+    background: #111;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 5px 15px;
+    outline: none;
 }
